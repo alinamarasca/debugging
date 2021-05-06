@@ -1,6 +1,7 @@
 'use strict';
+console.log('-- begin --');
 
-/* Uppercaseify
+/* Reversicasify
 
   you can use for loops to do some logic for each element in a string
 
@@ -13,8 +14,12 @@ let reverseUpperCase = '';
 
 for (_; _; _) {
   // a blank canvas :)
-
-
 }
 
-console.assert(reverseUpperCase === 'EDCBA', 'reversed string is the original reversed');
+console.assert(
+  reverseUpperCase === 'EDCBA',
+  'reversed string is the original reversed'
+);
+
+
+console.log('-- end --');

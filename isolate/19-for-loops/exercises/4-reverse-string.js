@@ -1,6 +1,7 @@
 'use strict';
+console.log('-- begin --');
 
-/* Uppercaseify
+/* Reverse strings
 
   you can use for loops to do some logic for each element in a string
 
@@ -14,7 +15,6 @@ console.log('originalString:', originalString);
 let reversedString = '';
 
 for (_; _; _) {
-
   const nextLetter = _;
   reversedString = _;
 
@@ -22,4 +22,10 @@ for (_; _; _) {
   console.log('reversedString:', reversedString);
 }
 
-console.assert(reversedString === 'edcba', 'reversed string is the original reversed');
+console.assert(
+  reversedString === 'edcba',
+  'reversed string is the original reversed'
+);
+
+
+console.log('-- end --');

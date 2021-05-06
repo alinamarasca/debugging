@@ -1,11 +1,10 @@
 'use strict';
+console.log('-- begin --');
 
 /**
- * reverses a string of text
- * @param text {string} - the string of text to return
- * @example {string} a new string, the initial text backwards
- * const eert = reverse('tree');
- * console.assert(eert === 'eert');
+ * reverses a string
+ * @param {string} text - the string to reverse
+ * @returns {string} the original string, backwards
  */
 const reverser = (text = '') => {
   let reversedText = '';
@@ -14,7 +13,6 @@ const reverser = (text = '') => {
   }
   return reversedText;
 };
-
 
 const _1_expected = 'eert';
 const _1_actual = reverser('tree');
@@ -30,3 +28,6 @@ const _3_expected = 'racecar';
 const _3_actual = reverser('racecar');
 const _3_test = _3_actual === _3_expected;
 console.assert(_3_test, 'Test 3');
+
+
+console.log('-- end --');
