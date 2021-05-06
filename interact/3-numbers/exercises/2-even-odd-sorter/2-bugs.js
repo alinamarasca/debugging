@@ -9,19 +9,19 @@
 
 */
 
-const userNumber = NaN;
+let userNumber = NaN; //will be reassigned
 while (Number.isNaN(userNumber)) {
   const userInput = prompt('enter a number');
 
-  if (userInput === '' && userInput === null) {
+  if (userInput === '' || userInput === null) {
     alert('enter something!');
-    break;
+    continue; //start the loop
   }
 
-  userNumber = NaN(userInput);
+  userNumber = Number(userInput); //turn into Number
 
   if (Number.isNaN(userNumber)) {
-    alert('"', userInput, '" is not a number');
+    alert(`"${userInput}" is not a number`);//what a mess
   }
 }
 

@@ -1,22 +1,24 @@
 'use strict';
 
 let userInput = '';
-let isTooShort = true;
+let isTooShort = true; //flag
 while (isTooShort) {
-  userInput = prompt('enter anything longer than 5 characters');
+  userInput = prompt('enter anything longer than 5 characters'); 
   console.log('userInput:', typeof userInput, userInput);
 
   // continue if the user did not input anything
-  ___;
-
+  if (userInput === '' || userInput === null) {
+  alert ('thats nothing');
+  continue;
+  }
   // continue if the input is too short (5 characters or less)
-  if (_) {
+  if (userInput.length < 5) {
     alert('too short');
-    _;
+    continue;
   }
 
   // toggle the flag variable, telling the loop to finish
-  isTooShort = _;
+  isTooShort = false;
 }
 
 const finalMessage =

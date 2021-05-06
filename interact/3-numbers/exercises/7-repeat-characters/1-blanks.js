@@ -1,7 +1,7 @@
 'use strict';
 
 let stringToRepeatify = '';
-let repetitions = NaN;
+let repetitions = NaN; //if it is not a number it will ask you again till you enter number
 while (true) {
   /* gather a string from the user */
   stringToRepeatify = prompt('enter a phrase, each character will be repeated:');
@@ -13,7 +13,7 @@ while (true) {
   } else {
     /* ask the user for a number */
     let inputIsNumber = false;
-    while (!inputIsNumber) {
+    while (!inputIsNumber) { //true
       const repetitionsInput = prompt(
         'how many times do you want to repeat each character?'
       );
@@ -26,10 +26,10 @@ while (true) {
         repetitions = Number(repetitionsInput);
 
         /* make sure the user input a valid number */
-        if (_) {
+        if (Number.isNaN(repetitions)) { //here ()
           alert('"' + repetitionsInput + '" is not a number');
         } else {
-          inputIsNumber = _;
+          inputIsNumber = Number(repetitionsInput);
         }
       }
     }
@@ -47,9 +47,9 @@ while (true) {
 let withRepeatedCharacters = '';
 
 /* iterate through each character in the user input */
-for (_) {
+for (let character of stringToRepeatify ) { //() OR IN?
   /* append each character multiple times to the new string */
-  for (_) {
+  for (let i = 0; i < repetitions; i++) { //()
     withRepeatedCharacters += character;
   }
 }

@@ -17,25 +17,28 @@ When you're done entering strings press "cancel"`
 );
 
 // -- gather user nextInput --
-const strings = [];
-let nextInput = '';
-while (nextInput === null) {
+const strings = []; //ALL THE INPUT
+let nextInput = null //OUR PROMPT
+
+while (nextInput === null) { //TRUE to start  the loop
   nextInput = prompt('enter the next phrase or press "cancel"');
 
   // -- validate the nextInput --
   if (nextInput === '') {
     // -- check if the user nextInput nothing --
     alert('nothing is not allowed');
-  } else if (typeof nextInput !== 'null') {
+  
+  } else {
     // -- push the nextInput --
     strings.push(nextInput);
+    
   }
 }
 
 // -- allow the user to filter their nextInputs --
-const filtered = [];
-for (const text of strings) {
-  const keepIt = alert(`do you want to keep "${text}"?`);
+const filtered = []; //WHAT WE KEEP
+for (let text of strings) { //was const
+  const keepIt = confirm(`do you want to keep "${text}"?`); //V
   if (keepIt) {
     filtered.push(text);
   }

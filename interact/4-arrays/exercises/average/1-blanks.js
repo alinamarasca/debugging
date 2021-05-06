@@ -17,7 +17,7 @@ When you're done entering numbers enter "done"
 // you can use `const` because the variable is not reassigned
 //  the contents of the array will change
 //  but the variable will still reference the same array
-const numbers = [];
+const numbers = []; //FINAL ARRAY
 
 let doneEntering = false;
 while (!doneEntering) {
@@ -26,39 +26,39 @@ while (!doneEntering) {
   // -- validate the input --
 
   // -- check if the user is done --
-  if (_ === _) {
+  if ( input === 'done') {
     doneEntering = true;
-    continue;
+    continue; //OUT OF THE LOOP UP
   }
 
   // -- check if the user input nothing --
-  if (__ || __) {
+  if (input === '' || input === null) {
     alert('nothing is not allowed');
-    continue;
+    continue; //OUT OF THE LOOP UP
   }
 
   // -- push the input if it was a number --
-  const nextNumber = _(input);
-  if (_._(nextNumber)) {
+  const nextNumber = Number(input); //CONVERT INPUT INTO NUMBER
+  if (Number.isNaN(nextNumber)) { //CHECK IF IT IS A NUMBER
     alert(`"${input}" is not a number`);
   } else {
-    numbers._(nextNumber);
+    numbers.push(nextNumber);
   }
 }
 
 // -- calculate the sum --
 let sum = 0;
-for (const _ of _) {
-  sum += number;
+for (const monster of numbers) {
+  sum += monster;
 }
 
 // -- calculate the average --
-const average = sum / numbers._;
+const average = sum / numbers.length;
 
 // -- build the final message --
-let message = `nubers: `;
-for (const number of numbers) {
-  message += `${number}, `;
+let message = `numbers: `; //TYPo
+for (const monster of numbers) {
+  message += `${monster}, `;
 }
 message += `\naverage: ${average}`;
 
